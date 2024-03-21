@@ -43,7 +43,7 @@ namespace SistemaEmpleado.DAL
         }
         public void EditarEmpleadoDal(Empleado e)
         {
-            string consulta = "update empleadoex set puesto='" + e.Puesto + "'," + "salario='" + e.Salario + "'," + "fechacontratacion='" + e.FechaContratacion  +"'," + "where idempleado=" + e.IdEmpleado;
+            string consulta = "update empleadoex set puesto='" + e.Puesto + "'," + "salario='" + e.Salario + "'," + "fechacontratacion='" + e.FechaContratacion  +"'" + "where idempleado=" + e.IdEmpleado;
             conexion.Ejecutar(consulta);
         }
         public void EliminarEmpleadoDal(int id)

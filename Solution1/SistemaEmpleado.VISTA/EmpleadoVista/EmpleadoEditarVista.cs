@@ -28,6 +28,8 @@ namespace SistemaEmpleado.VISTA.EmpleadoVista
             em.Puesto = textBox1.Text;
             em.Salario = Convert.ToInt32(textBox2.Text);
             em.FechaContratacion = dateTimePicker1.Value;
+            bss.EditarEmpleadoBss(em);
+            MessageBox.Show("Datos Actualizados");
         }
 
         private void EmpleadoEditarVista_Load(object sender, EventArgs e)
@@ -36,8 +38,7 @@ namespace SistemaEmpleado.VISTA.EmpleadoVista
             textBox1.Text = em.Puesto;
             textBox2.Text = Convert.ToString(em.Salario);
             dateTimePicker1.Value = em.FechaContratacion;
-            bss.EditarEmpleadoBss(em);
-            MessageBox.Show("Datos Actualizados");
+            
 
         }
     }
